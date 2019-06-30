@@ -1,0 +1,35 @@
+<!doctype>
+<html>
+<head>
+<title>ckeditor</title>
+
+    <script src="{{ asset('/') }}ckeditor/ckeditor.js"></script>
+    <script src="{{ asset('/') }}ckeditor/samples/js/sample.js"></script>
+    <link rel="stylesheet" href="{{ asset('/') }}ckeditor/samples/css/samples.css">
+    <link rel="stylesheet" href="{{ asset('/') }}ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
+
+
+</head>
+<body>
+
+
+<textarea id="summary-ckeditor"></textarea>
+
+
+<script>
+    CKEDITOR.replace( 'summary-ckeditor', {
+        filebrowserBrowseUrl : "{{ URL::asset('/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files') }}",
+        filebrowserImageBrowseUrl : "{{ URL::asset('/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images') }}",
+        filebrowserFlashBrowseUrl : "{{ URL::asset('/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash') }}",
+        filebrowserUploadUrl : "{{ URL::asset('/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files') }}",
+        filebrowserImageUploadUrl : "{{ URL::asset('/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images') }}",
+        filebrowserFlashUploadUrl : "{{ URL::asset('/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash') }}",
+    });
+</script>
+</body>
+</html
+
+
+
+
+
